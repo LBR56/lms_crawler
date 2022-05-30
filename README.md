@@ -8,15 +8,17 @@ lms는 앞으로 여러분의 인공지능 공부에 큰 도움이 될 것입니
 
 ```bash
 .
+├── LICENSE
 ├── README.md # 사용법이 적힌 파일
 ├── config.py # 유저 정보와 사이트 정보를 담은 파일
-├── cralwer.py # 데이터 수집 관련 파일
+├── cralwer.py  # 데이터 수집 관련 파일
 ├── driver.py # driver를 통한 웹 이동용 파일
 ├── main.py # 실행시킬 파일
+├── requirement.txt # python 라이브러리 모음
 ├── save.py # 내용 저장 관련 파일
 └── settings.py # Chrome 기반 driver 세팅 관련 파일
 
-0 directories, 7 files
+0 directories, 9 files
 ```
 
 각 파일에 대한 간단한 설명과 실행법을 나열합니다.
@@ -25,12 +27,12 @@ lms는 앞으로 여러분의 인공지능 공부에 큰 도움이 될 것입니
 
 ***
 
-- [설치](#설치목차)
-  - [chrome 설치](#chrome-설치목차)
-  - [config 파일 수정](#config-파일-수정목차)
-- [사용법](#사용법목차)
+- [설치](#설치)
+  - [chrome 설치](#chrome-설치)
+  - [config 파일 수정](#config-파일-수정)
+- [사용법](#사용법)
 
-## [설치](#목차)
+## 설치
 
 ***
 
@@ -45,10 +47,14 @@ git clone https://github.com/LBR56/lms_cralwer.git
 그럼으로 필요한 라이브러리를 설치합니다.
 
 ```bash
+python -m pip install --upgrade pip
+```
+
+```bash
 pip install -r requirements.txt
 ```
 
-### [chrome 설치](#목차)
+### chrome 설치
 
 ***
 
@@ -56,7 +62,7 @@ pip install -r requirements.txt
 
 [크롬 다운로드 링크](https://www.google.com/intl/ko_kr/chrome/)를 통해 설치해 주시길 바랍니다.
 
-### [config 파일 수정](#목차)
+### config 파일 수정
 
 ***
 
@@ -73,7 +79,7 @@ SITE_URL = 'lms 사이트 url' # lms 사이트 링크
 
 다음 각 요소를 변경해주지 않는다면, 원치 않는 사이트로 들어갈 위험이 있습니다.
 
-## [사용법](#목차)
+## 사용법
 
 ***
 
