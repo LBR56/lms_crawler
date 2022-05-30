@@ -3,4 +3,4 @@ USER_INFO = {
   'pw':'비민번호'
 }
 
-SITE_URL = 'lms 사이트 url'
+SITE_URL = 'lms_사이트_url'

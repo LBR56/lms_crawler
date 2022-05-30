@@ -12,18 +12,22 @@ def check_driver():
   # 여기서 오류가 발생하면 크롬을 설치
   chrome_ver = chromedriver_autoinstaller.get_chrome_version().split('.')[0]
 
-  driver_path = os.path.abspath(os.path.join(__file__, '..', 'driver', chrome_ver, 'chromedriver'))
-
-  # windows만 exe 파일을 사용함
-  if os_type == 'Windows':
-    driver_path += '.exe'
+  driver_path = os.path.abspath(os.path.join(__file__, '..', 'driver', chrome_ver))
 
   # 파일이 있는지 확인하고 접근
   if os.path.exists(driver_path):
     print(f"chrome driver is insatlled: {driver_path}")
   else:
     print(f"install the chrome driver(ver: {chrome_ver})")
+    os.mkdir('driver')
     print(chromedriver_autoinstaller.install(path = os.path.dirname(driver_path)))
+
+# windows만 exe 파일을 사용함
+  if os_type == 'Windows':
+    driver_path += '/chromedriver.exe'
+  else:
+    driver_path += '/chromedriver'
+
   return driver_path
 
 # 브라우저 연결
