@@ -22,7 +22,7 @@ def click_recent_node(driver):
   driver.find_elements(By.CSS_SELECTOR, 'div.section__body')[1].click()
   driver.implicitly_wait(10)
   print('첫 목차로 이동')
-  driver.find_element(By.CSS_SELECTOR, 'div.step-wrap').click()
+  driver.find_element(By.CSS_SELECTOR, 'div.StepList_step__zT7Uj').click()
   driver.implicitly_wait(10)
 
 def collect_step_links(driver, results):

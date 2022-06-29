@@ -4,7 +4,14 @@ from cralwer import preprocessing
 def createFolder(results):
   print('폴더 제작')
 
-  directory = results['node_category']
+  directory = 'data'
+  try:
+    if not os.path.exists(directory):
+      os.makedirs(directory)
+  except OSError:
+    print ('Error: Creating directory. ' +  directory)
+
+  directory += '/' + results['node_category']
   try:
     if not os.path.exists(directory):
       os.makedirs(directory)
