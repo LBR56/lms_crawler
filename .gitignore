@@ -1,3 +1,5 @@
 .DS_Store
 /driver
 /data
+config
+config.py
